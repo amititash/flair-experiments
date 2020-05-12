@@ -76,8 +76,8 @@ def train(args, tag_type):
                 learning_rate=args.train_learning_rate,
                 mini_batch_size=args.per_gpu_batch_size,
                 max_epochs=args.num_train_epochs,
-                embeddings_storage_mode=args.embeddings_storage_mode,
-                checkpoint=True)
+                embeddings_storage_mode=args.embeddings_storage_mode
+                )
 
     model = SequenceTagger.load(args.model_dir + '/final-model.pt')
     if(args.predict_file):
